@@ -39,6 +39,7 @@ ADD ./config/supervisor/salt-api.conf /etc/supervisor/conf.d/salt-api.conf
 ADD ./config/supervisor/salt-minion.conf /etc/supervisor/conf.d/salt-minion.conf
 
 ADD ./extmods /etc/salt/extmods
+ADD ./config/ssh/ssh_config /etc/ssh/ssh_config
 
 # 设置挂载点
 VOLUME ["/etc/salt","/var/log/salt","/var/cache/salt","/srv/salt","/srv/pillar"]
