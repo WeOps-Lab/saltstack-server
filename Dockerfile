@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 # 创建必要的文件夹
 RUN mkdir -p /srv/salt
 
-RUN /opt/saltstack/salt/bin/pip install psycopg2-binary sqlalchemy records
+RUN /opt/saltstack/salt/bin/pip install psycopg2-binary sqlalchemy records hvac
 
 
 RUN wget -c "https://github.com/lcvvvv/kscan/releases/download/v1.85/kscan_linux_amd64.zip" &&\
@@ -38,6 +38,7 @@ ADD ./config/supervisor/salt-master.conf /etc/supervisor/conf.d/salt-master.conf
 ADD ./config/supervisor/salt-api.conf /etc/supervisor/conf.d/salt-api.conf
 ADD ./config/supervisor/salt-minion.conf /etc/supervisor/conf.d/salt-minion.conf
 
+ADD ./extmods /etc/salt/extmods
 
 # 设置挂载点
 VOLUME ["/etc/salt","/var/log/salt","/var/cache/salt","/srv/salt","/srv/pillar"]

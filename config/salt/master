@@ -489,7 +489,10 @@ file_recv_max_size: 100
 ##########################################
 # Define the default salt-ssh roster module to use
 # roster: postgres
-roster: flat
+roster: vault
+vault_addr: VAULT_ADDR_PLACEHOLDER
+vault_token: VAULT_TOKEN_PLACEHOLDER
+vault_kv_path: VAULT_KV_PATH_PLACEHOLDER
 # Pass in an alternative location for the salt-ssh `flat` roster file
 roster_file: /etc/salt/roster
 
