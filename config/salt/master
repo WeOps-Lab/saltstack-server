@@ -494,7 +494,7 @@ vault_addr: VAULT_ADDR_PLACEHOLDER
 vault_token: VAULT_TOKEN_PLACEHOLDER
 vault_kv_path: VAULT_KV_PATH_PLACEHOLDER
 # Pass in an alternative location for the salt-ssh `flat` roster file
-roster_file: /etc/salt/roster
+# roster_file: /etc/salt/roster
 
 # Define locations for `flat` roster files so they can be chosen when using Salt API.
 # An administrator can place roster files into these locations. Then when
